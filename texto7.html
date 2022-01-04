@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="stylesheet" href="./css/normalize.css"/>
+</head>
+
+<body>
+<!-- The Modal config -->
+<div id="myModal2ok" class="modalok">
+  <div class="modal-full modal-medio">
+
+<div class="modal-header">
+  <span><b>AJUSTES</b></span>
+  <button type="submit" class="pure-button pure-button-warning closeok"></button>
+</div>
+<div class="modal-body">
+DIA:
+<select name="dia7" id="diames" class="form-control7 dia-mes">
+    <option value="" id="dia7">Dia...</option>
+</select>  
+    <div class="toggleButton">Modo noche
+    <div class="border">
+      <div class="button"></div>
+    </div>
+  </div>
+<hr>
+  <p class="range">
+    <output for="fader" id="fontsize">0</output>
+    <input type="range" min="0" max="100" value="25" step="5" id="fader"/>
+    <span class="sp1" data-min="a-" id="button2" onclick="changeFontSize(this)"></span>
+    <span class="sp2" data-max="A+" id="button1" onclick="changeFontSize(this)"></span>
+  </p>
+</div>
+  </div>
+</div>
+<!-- modal compartir -->
+<div id="modalshare" class="modalok">
+  <div class="modal-full modal-medio">
+
+<div class="modal-header">
+  <span><b>COMPARTIR</b></span>
+  <button type="submit" class="pure-button pure-button-warning close" id="closeok1"></button>
+</div>
+<div class="modal-body" style="text-align: center;">
+  <!-- <button id="copiarwhats"><svg style="width:64px;height:64px" viewBox="0 0 16 16"><g fill="green"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144l-2.494.654l.666-2.433l-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931a6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646c-.182-.065-.315-.099-.445.099c-.133.197-.513.646-.627.775c-.114.133-.232.148-.43.05c-.197-.1-.836-.308-1.592-.985c-.59-.525-.985-1.175-1.103-1.372c-.114-.198-.011-.304.088-.403c.087-.088.197-.232.296-.346c.1-.114.133-.198.198-.33c.065-.134.034-.248-.015-.347c-.05-.099-.445-1.076-.612-1.47c-.16-.389-.323-.335-.445-.34c-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654c0 .977.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992c.47.205.84.326 1.129.418c.475.152.904.129 1.246.08c.38-.058 1.171-.48 1.338-.943c.164-.464.164-.86.114-.943c-.049-.084-.182-.133-.38-.232z"/></g></svg> -->
+  <!-- </button> -->
+  <!-- <button id="telegrambuton"><svg style="width:64px;height:64px" viewBox="0 0 16 16"><g fill="#40B3E0"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01c-.378.15-.577.298-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294c.26.006.549-.1.868-.32c2.179-1.471 3.304-2.214 3.374-2.23c.05-.012.12-.026.166.016c.047.041.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817c-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088c.327.216.589.393.85.571c.284.194.568.387.936.629c.093.06.183.125.27.187c.331.236.63.448.997.414c.214-.02.435-.22.547-.82c.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315a.337.337 0 0 0-.114-.217a.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/></g></svg> -->
+  <!-- </button> -->
+  <img onclick="nativeShare();" src="https://cdn.alfabetajuega.com/alfabetajuega/logos/share-native.png" style="width:32px!important;">
+  <img onclick="shareNativo('contentt');" src="https://cdn.alfabetajuega.com/alfabetajuega/logos/share-native.png" style="width:64px!important;">
+  <button onclick="SelectWhats('contentt');"><svg style="width:64px;height:64px" viewBox="0 0 16 16"><g fill="green"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144l-2.494.654l.666-2.433l-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931a6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646c-.182-.065-.315-.099-.445.099c-.133.197-.513.646-.627.775c-.114.133-.232.148-.43.05c-.197-.1-.836-.308-1.592-.985c-.59-.525-.985-1.175-1.103-1.372c-.114-.198-.011-.304.088-.403c.087-.088.197-.232.296-.346c.1-.114.133-.198.198-.33c.065-.134.034-.248-.015-.347c-.05-.099-.445-1.076-.612-1.47c-.16-.389-.323-.335-.445-.34c-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654c0 .977.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992c.47.205.84.326 1.129.418c.475.152.904.129 1.246.08c.38-.058 1.171-.48 1.338-.943c.164-.464.164-.86.114-.943c-.049-.084-.182-.133-.38-.232z"/></g></svg>
+  </button>
+  <button onclick="SelectContent('contentt');"><svg style="width:64px;height:64px" viewBox="0 0 16 16"><g fill="#40B3E0"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01c-.378.15-.577.298-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294c.26.006.549-.1.868-.32c2.179-1.471 3.304-2.214 3.374-2.23c.05-.012.12-.026.166.016c.047.041.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817c-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088c.327.216.589.393.85.571c.284.194.568.387.936.629c.093.06.183.125.27.187c.331.236.63.448.997.414c.214-.02.435-.22.547-.82c.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315a.337.337 0 0 0-.114-.217a.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/></g></svg>
+  </button>
+</div>
+  </div>
+</div>
+<!-- fin modal -->
+<header style="background-color: #BDBDBD;color: black;" id="cabezera">
+		<div class="icons-left"></div>
+			<div id="titulo">Texto diario - Julio</div>
+<a class="chevron-arrow-left" id="prev"></a>			
+		<div class="icon-right">
+			 <a href="#" id="botonshare"><svg style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#000000" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z" /></svg></a>      
+      <a href="#" id="myBtn2" class="icon" ><svg version="1.1" x="0" y="0" width="100" height="100" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M50 64c-7.4 0-13.4-6-13.4-13.4 0-7.4 6-13.4 13.4-13.4 7.4 0 13.4 6 13.4 13.4C63.4 58 57.4 64 50 64zM50 31.4c-10.6 0-19.2 8.6-19.2 19.2 0 10.6 8.6 19.2 19.2 19.2 10.6 0 19.2-8.6 19.2-19.2C69.2 40 60.6 31.4 50 31.4zM85.5 71.5l-6.6 8.2 -9.8-3.5 -10.4 5 -3.4 9.9H44.7l-3.4-9.9L30.9 76.3l-9.8 3.5 -6.6-8.2 5.6-8.8 -2.6-11.2 -8.8-5.5 2.3-10.3 10.4-1.2 7.2-9 -1.2-10.4 9.5-4.6 7.4 7.4h11.5l7.4-7.4 9.5 4.6 -1.2 10.4 7.2 9 10.4 1.2 2.3 10.3 -8.8 5.5 -2.6 11.3L85.5 71.5zM100 49.5l-4.8-20.9 -12.6-1.4 -3.2-4 1.4-12.6L61.5 1.2l-9 9h-5.2l-9-9 -19.3 9.3 1.4 12.6 -3.2 4L4.8 28.6 0 49.5l10.8 6.8 1.2 5L5.1 72l13.4 16.8 12-4.2 4.6 2.2 4.2 12h21.4l4.2-12 4.6-2.2 12 4.2 13.4-16.8 -6.8-10.8 1.1-5L100 49.5z" /></svg></a>
+</div>
+<a class="chevron-arrow-right" id="next"></a>
+</header>
+
+
+
+<div id="contenido" class="day">
+  
+<table align="center" border="0">
+<tr>
+	<td align="center" id="capa">
+
+  <span id="contentt"></span>
+
+<!-- <script src="js/html.js"></script>
+<script>
+var a = new Array()
+var tiempo = new Date()
+
+var temadiario = tiempo.getDate()
+var mmes = tiempo.getMonth();
+var frase = temadiario+"/"+mmes;
+</script> -->
+
+<!-- <script src="meses/270-enero.js"></script> -->
+<!-- <script src="meses/271-febrero.js"></script> -->
+<!-- <script src="meses/272-marzo.js"></script> -->
+<!-- <script src="meses/273-abril.js"></script> -->
+<!-- <script src="meses/274-mayo.js"></script> -->
+<!-- <script src="meses/275-junio.js"></script> -->
+<script src="meses/276-julio.js"></script>
+<!-- <script src="meses/277-agosto.js"></script> -->
+<!-- <script src="meses/278-septiembre.js"></script> -->
+<!-- <script src="meses/279-octubre.js"></script> -->
+<!-- <script src="meses/280-noviembre.js"></script> -->
+<!-- <script src="meses/281-diciembre.js"></script> -->
+
+<!-- <script>
+	document.write(a[frase]);
+</script> -->
+	</td>
+</tr>
+</table>
+
+</div>
+
+<script src="js/miFontsize.js"></script>
+<!-- <script>
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    window.plugins.insomnia.keepAwake();
+}
+</script>
+<script src="cordova.js"></script> -->
+</body>
+</html>

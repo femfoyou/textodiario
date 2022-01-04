@@ -1,0 +1,4 @@
+@font-face{font-family:myFont;font-style:normal;
+font-weight:normal;src:local("Helvetica")}
+/*a:target {margin-top:-84px!important; padding-top:84px!important;}*/
+:target {margin-top:-72px!important; padding-top:72px!important;}

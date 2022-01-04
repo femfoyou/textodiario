@@ -1,0 +1,131 @@
+*{ margin: 0;padding: 0;font-family: sans-serif;}
+
+:focus{outline:0}
+.solid {
+  position: fixed;
+  top: 21px; /* 78 */
+  left: 0px;
+  cursor: pointer; 
+  /*width: 40px; */
+  /*padding: 8px 6px; */
+  margin-left: 24px; 
+  background-color: transparent!important; 
+  /*color: rgba(134, 79, 11, 0.8); */
+  /*text-transform: uppercase; */
+  font-weight: bold; 
+  /*border: 1px solid #999; */  
+/*  -moz-border-radius: 5px; 
+  -webkit-border-radius: 5px; 
+  border-radius: 5px; */
+  z-index: 999999999;
+}
+#content {margin: -6%;}
+
+.selecmes {
+  background: transparent;
+  border: none;
+  /*height: 29px;*/
+  /*width: 100px;*/
+  width: auto;
+  top: 14px;
+  left: 151px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  font-size: 17px;color:inherit;
+  z-index: 999999999;
+}
+#soloMes {
+	position: fixed;
+	top: 14px;
+  left: 151px;
+  color: #3fa2bf;
+}
+.diames select{
+    position: fixed; /* Stay in place */
+    z-index: 999999999; /* Sit on top */
+    /* padding-top: 64px; */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    overflow: auto; /* Enable scroll if needed */
+}
+.diames select.dia-mes {
+  position:fixed;
+  top: 10%;
+  right: -10%;
+  margin: auto;
+  border: 1px solid;
+	font-size: 16px;
+	/* top: 15px;left: 260px; */
+  z-index: 999999999;
+}
+select.dia-mes{width: 100px;}
+
+/* modo noche */
+:root{
+  --bgWhite:white;
+  --bgBlack:black;
+  --colorBlack:var(--bgBlack);
+  --colorWhite:var(--bgWhite);
+}
+.toggleButton {
+  height: auto;
+  line-height: 42px;
+  /*border: 1px solid;*/
+  margin-bottom: 15px;
+}
+.border{
+  /*position: absolute;*/
+  width: 60px;
+  height: auto;
+  background: var(--bgWhite);
+  border:2px solid var(--colorBlack);
+  border-radius: 50px;
+  cursor: pointer;
+  /*margin:30px;*/
+  float: right;
+}
+.button{
+  width: 20px;
+  height: 20px;
+  margin:10px;
+  border-radius: 50%;
+  background: #eee;
+  /*background: var(--bgBlack);*/
+  /* #3fa2bf */
+  /*border: 2px solid var(--bgBlack);*/
+  /*transition: .5s;*/
+}
+.day{
+  width: 100%;
+  height: 100vh;
+  /*padding: 80px 30px 0px 30px;*/
+  /*box-sizing: border-box;*/
+  background: var(--bgWhite);
+  color:var(--colorBlack);
+  /*transition: 1s;*/
+  /*text-align: justify;*/
+  padding: 0px;
+  margin: 0px;
+}
+/* clases que se agregaran con javascript*/
+
+.activeBorder{
+  /*background: var(--bgGreen);*/
+  border:2px solid var(--colorBlack);
+}
+.active{
+  background: #3fa2bf;
+  transform: translateX(100%);
+}
+.night{
+  background: var(--bgBlack);
+  color:var(--colorWhite);
+}
+
+#soloMes1 {
+	display: none;
+	position: relative;
+	top: -30px;
+	left: 190px;
+}
