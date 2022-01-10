@@ -51,12 +51,10 @@
 }
 .diames select.dia-mes {
   position:fixed;
-  top: 10%;
-  right: -10%;
-  margin: auto;
+  top: 40px;
+  left: 52%;
   border: 1px solid;
-	font-size: 16px;
-	/* top: 15px;left: 260px; */
+font-size: 16px;
   z-index: 999999999;
 }
 select.dia-mes{width: 100px;}
